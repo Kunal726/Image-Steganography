@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Encrypt</title>
+    <script type="text/javascript">
+        function Preview(event)
+        {
+            var f = event.target.files[0];
+            var reader = new FileReader();
+            var p = document.getElementById("pre");
+            p.title = f.name;
+            reader.onload = function(event) {
+                p.src = event.target.result;
+            };
+            reader.readAsDataURL(f);
+        }
+		
+    </script>
+</head>
+<body>
+	<?php include "Encode.php" ?>
+    <form action="Encode.php" method="post" enctype="multipart/form-data" onsubmit="Sub()" id="myform">
+        Select File   <input type="file" name="path" id="ufile" type="image" onchange="Preview(event)"/><br><br>
+        <img src="" width="200" height="200" id="pre"/><br><br>
+        Enter Secret Message <input type="text" name="message"><br><br>
+        Enter Password <input type="password" name="password"><br><br>
+        <input type="submit" value="submit" name="Encrypt"><br><br>
+    </form>
+</body>
+</html>

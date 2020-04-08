@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Decrypt</title>
+    <script>
+        function Preview(event)
+        {
+            var f = event.target.files[0];
+            var reader = new FileReader();
+            var p = document.getElementById("pre");
+            p.title = f.name;
+            reader.onload = function(event) {
+                p.src = event.target.result;
+            };
+            reader.readAsDataURL(f);
+        }
+    </script>
+</head>
+<body>
+	<?php include "Decode.php" ?>
+    <form action="Decode.php" method="post" enctype="multipart/form-data">
+        Select File   <input type="file" name="path" id="ufile" type="image" onchange="Preview(event)"/><br><br>
+        <img src="#" width="200" height="200" id="pre"/><br><br>
+        Enter Password <input type="password" name="password"><br><br>
+        <input type="submit" value="submit" name="Decrypt"><br><br>
+    </form>
+</body>
+</html>

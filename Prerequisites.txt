@@ -1,0 +1,18 @@
+1.  To use PHP mailer firstly install xampp.
+2.  Then go to xampp folder then go to folder named sendmail
+3.  In the sendmail folder open sendmail.ini file
+4.  In the file you will see the following lines
+	auth_username=
+	auth_password=
+	force_sender=
+	hostname=
+5. Remove semicolon(;) before them and add
+	1. emailid in auth_username i.e. auth_username= your email
+	2. email password in auth_password i.e. auth_password = your password
+	3.  emailid in force_sender i.e. force_sender = your email
+	4. localhost in hostname i.e. hostname = localhost
+6. Save the file
+7. Add the phpmailer_5.2.4 folder to uyour project folders
+7. open Xampp control panel
+8. start apache service
+9. you are ready to use
