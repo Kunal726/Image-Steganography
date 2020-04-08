@@ -4,7 +4,7 @@ We used LSB algorithm to create the project.
 We used comition of java, PHP and HTML Languages.
 
 
-#  Itroduction
+#  Introduction
 
 Since the rise of the Internet one of the most important factors of communication and information technology has been the security of information. It is necessary to protect this information while communicated over insecure channels. Thus, a need exists for developing technology that will help protect the integrity of digital content and secure the intellectual property rights of owners. 
 
